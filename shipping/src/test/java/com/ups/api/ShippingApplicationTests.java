@@ -1,8 +1,8 @@
 package com.ups.api;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -17,6 +17,7 @@ import com.ups.api.app.ShippingDemo;
 import com.ups.api.app.tool.ShipApi;
 import com.ups.api.app.tool.Util;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 
 import org.openapitools.shipping.client.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 @SpringBootTest(classes = ShippingApplication.class)
+@EnabledIfEnvironmentVariable(named = "UPS_CIE_TESTS", matches = "true")
 class ShippingApplicationTests {
 	@Autowired
     AppConfig appConfig;
