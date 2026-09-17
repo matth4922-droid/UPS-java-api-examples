@@ -70,8 +70,7 @@ public class AddressValidation implements CommandLineRunner {
         addressValidationApi.getApiClient().addDefaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
 		return Util.jsonResultPreprocess(addressValidationApi
 		.addressValidation(this.appConfig.getAddressValidationReqOption(), this.appConfig.getAddressValidationVersion(),
-				xavRequestWrapper,null,null),
-											Util.getJsonToObjectConversionMap(),XAVResponseWrapper.class);
+				xavRequestWrapper,null,null), XAVResponseWrapper.class);
 		/*return addressValidationApi
 		.addressValidation(this.appConfig.getAddressValidationReqOption(), this.appConfig.getAddressValidationVersion(),
 				xavRequestWrapper,null,null);*/

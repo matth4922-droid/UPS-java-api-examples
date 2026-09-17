@@ -104,8 +104,7 @@ public class RateDemo implements CommandLineRunner {
 														request,
 														transId,
 														appConfig.getTransactionSrc(),
-														additionalInfo),
-											Util.getJsonToObjectConversionMap(),RATEResponseWrapper.class);
+														additionalInfo), RATEResponseWrapper.class);
 	}
 	
 	private void cleanup() {
