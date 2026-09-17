@@ -16,8 +16,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<swagger-annotations-version>1.5.22</swagger-annotations-version>
 		<spring-web-version>5.3.18</spring-web-version>
 		<jackson-databind.version>2.14.0</jackson-databind.version>
