@@ -57,7 +57,6 @@ public class ClientCredentialDemo implements CommandLineRunner {
                                     getBytes(StandardCharsets.UTF_8));
                     oauthApi.getApiClient().setBasePath(appConfig.getOauthBaseUrl());
                     oauthApi.getApiClient().addDefaultHeader(HttpHeaders.AUTHORIZATION, BASIC_AUTH + encodedClientIdAndSecret);
-                    log.info("ecnoded clientId and secret: [{}]", encodedClientIdAndSecret);      
 
                     try {
                         generateAccessTokenResponse = oauthApi.createToken(CLIENT_CREDENTIALS, null);  
@@ -71,7 +70,7 @@ public class ClientCredentialDemo implements CommandLineRunner {
                 }
             }
         }
-        log.info("access token [{}], expiry [{}]", generateAccessTokenResponse, EXPIRY.get());
+        log.info("access token acquired, expiry [{}]", EXPIRY.get());
         appConfig.getAccessTokenStore().put(appConfig.getClientID(), accessToken);
     }
 

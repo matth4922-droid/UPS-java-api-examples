@@ -37,7 +37,6 @@ public class AuthCodeDemo implements CommandLineRunner  {
 			methodCase  = Integer.valueOf(method);
 			
 			log.info("AuthCodeDemo::run:method = " + method);
-			log.info("AuthCodeDemo::run:variable = " + variable);
 			
 
 		}catch (Exception e) {
@@ -156,7 +155,7 @@ public class AuthCodeDemo implements CommandLineRunner  {
 			if (status == 200) 	{
 				ObjectMapper mapper = new ObjectMapper();
 				AuthTokenResponce authTokenResponce = mapper.readValue(response.body(), AuthTokenResponce.class);
-				log.info("authTokenResponce = " + authTokenResponce.toString());	    		
+				log.info("authTokenResponce = " + authTokenResponce.toString());
 			} else if (status == 400 || status == 401 || status == 403 || status == 429) {	  
 				String err = response.body();	    			 
 				ErrorResponse errorResponse = new ErrorResponse(status, err.substring(err.indexOf("\":[{\"code\":\"") + 12, err.indexOf("\",\"")),  err.substring(err.indexOf(",\"message\":\"") + 12, err.indexOf("\"}]}")));
