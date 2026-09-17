@@ -1,6 +1,7 @@
 package com.ups.api.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -49,7 +50,7 @@ class TrackOfflineTest {
 		server.expect(request -> {
 			assertEquals(HttpMethod.GET, request.getMethod());
 			assertEquals("Bearer test-token", request.getHeaders().getFirst("Authorization"));
-			org.junit.jupiter.api.Assertions.assertTrue(request.getURI().toString()
+			assertTrue(request.getURI().toString()
 					.startsWith("http://localhost/api/track/v1/details/1Z12345E0205271688"));
 		}).andRespond(withSuccess(
 				"{\"trackResponse\":{\"shipment\":[{\"inquiryNumber\":\"1Z12345E0205271688\","
