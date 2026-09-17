@@ -8,7 +8,7 @@ delivery confirmation, and automatic notification of delivery status.
 
 ## Getting Started
 ### Prerequisites
-- You will need to have Maven and the Java Development Kit installed.
+- You will need to have Java 21 and Maven 3.9+ installed.
 
 ### Download
 - You can either download a local copy or clone the repository:
