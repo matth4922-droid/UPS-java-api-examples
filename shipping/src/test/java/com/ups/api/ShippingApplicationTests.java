@@ -112,7 +112,7 @@ class ShippingApplicationTests {
 		SHIPResponseWrapper shipResponseWrapper = Util.jsonResultPreprocess(shipApi.shipment(appConfig.getShippingVersion(), shipRequestWrapper,
 				transId,
 				appConfig.getTransactionSrc(),
-				null),Util.getJsonToObjectConversionMap(),SHIPResponseWrapper.class);
+				null), SHIPResponseWrapper.class);
 		ShipmentResponse shipmentResponse = shipResponseWrapper.getShipmentResponse();
 		assertNotNull( shipResponseWrapper);
 		shipping.processAllResponse(shippingSuccessJsonFileName, shipmentResponse);

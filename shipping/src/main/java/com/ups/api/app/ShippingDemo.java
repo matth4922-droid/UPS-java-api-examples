@@ -66,8 +66,7 @@ public class ShippingDemo implements CommandLineRunner {
 
 				SHIPResponseWrapper shipResponseWrapper = Util.jsonResultPreprocess(
 						shipApi.shipment(appConfig.getShippingVersion(), shipmentRequest, transId,
-								appConfig.getTransactionSrc(), null),
-						Util.getJsonToObjectConversionMap(), SHIPResponseWrapper.class);
+								appConfig.getTransactionSrc(), null), SHIPResponseWrapper.class);
 				ShipmentResponse shipmentResponse = shipResponseWrapper.getShipmentResponse();
 				if (trackingNumber == null) {
 					if (shipmentResponse.getShipmentResults().getPackageResults().get(0).getTrackingNumber() != null) {

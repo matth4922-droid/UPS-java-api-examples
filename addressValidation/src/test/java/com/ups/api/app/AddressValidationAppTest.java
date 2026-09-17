@@ -106,8 +106,7 @@ public class AddressValidationAppTest {
     // Get a Address Validation result
 	XAVResponseWrapper xavResponseWrapper = Util.jsonResultPreprocess(addressValidationApi
 	.addressValidation(this.appConfig.getAddressValidationReqOption(), this.appConfig.getAddressValidationVersion(),
-			xavRequestWrapper,null,null),
-										Util.getJsonToObjectConversionMap(),XAVResponseWrapper.class);
+			xavRequestWrapper,null,null), XAVResponseWrapper.class);
 
 
 		assertNotNull(xavResponseWrapper);
@@ -134,8 +133,7 @@ public class AddressValidationAppTest {
     // Get a Address Validation result
 	XAVResponseWrapper xavResponseWrapper = Util.jsonResultPreprocess(addressValidationApi
 	.addressValidation(this.appConfig.getAddressValidationReqOption(), this.appConfig.getAddressValidationVersion(),
-			xavRequestWrapper,null,null),
-										Util.getJsonToObjectConversionMap(),XAVResponseWrapper.class);
+			xavRequestWrapper,null,null), XAVResponseWrapper.class);
 
 
 		assertNotNull(xavResponseWrapper);
@@ -164,8 +162,7 @@ public class AddressValidationAppTest {
     // Get a Address Validation result
 	XAVResponseWrapper xavResponseWrapper = Util.jsonResultPreprocess(addressValidationApi
 	.addressValidation(this.appConfig.getAddressValidationReqOption(), this.appConfig.getAddressValidationVersion(),
-			xavRequestWrapper,null,null),
-										Util.getJsonToObjectConversionMap(),XAVResponseWrapper.class);
+			xavRequestWrapper,null,null), XAVResponseWrapper.class);
 
 
 		assertNotNull(xavResponseWrapper);
@@ -194,8 +191,7 @@ public class AddressValidationAppTest {
     // Get a Address Validation result
 	XAVResponseWrapper xavResponseWrapper = Util.jsonResultPreprocess(addressValidationApi
 	.addressValidation(this.appConfig.getAddressValidationReqOption(), this.appConfig.getAddressValidationVersion(),
-			xavRequestWrapper,null,null),
-										Util.getJsonToObjectConversionMap(),XAVResponseWrapper.class);
+			xavRequestWrapper,null,null), XAVResponseWrapper.class);
 
 
 		assertNotNull(xavResponseWrapper);
