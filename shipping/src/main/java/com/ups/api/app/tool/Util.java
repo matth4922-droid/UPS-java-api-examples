@@ -58,7 +58,6 @@ public class Util {
 					oauthApi.getApiClient().setBasePath(appConfig.getOauthBaseUrl());
 					oauthApi.getApiClient().addDefaultHeader(HttpHeaders.AUTHORIZATION,
 							BASIC_AUTH + encodedClientIdAndSecret);
-					log.info("ecnoded clientId and secret: [{}]", encodedClientIdAndSecret);
 
 					try {
 						GenerateTokenSuccessResponse generateAccessTokenResponse = oauthApi
@@ -72,7 +71,7 @@ public class Util {
 				}
 			}
 		}
-		log.info("access token [{}], expiry [{}]", accessToken, EXPIRY.get());
+		log.debug("access token expiry [{}]", EXPIRY.get());
 		appConfig.getAccessTokenStore().put(appConfig.getClientID(), accessToken);
 		return accessToken;
 	}
